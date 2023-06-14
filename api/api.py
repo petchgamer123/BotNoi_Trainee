@@ -38,42 +38,32 @@ def resultToDay(result):
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][9]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][9]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][0]["hour"][9]["temp_f"]
+                "temp_f": result["forecast"]["forecastday"][0]["hour"][9]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][0]["hour"][9]["condition"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][12]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][12]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][0]["hour"][12]["temp_f"]
+                "temp_f": result["forecast"]["forecastday"][0]["hour"][12]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][0]["hour"][12]["condition"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][15]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][15]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][0]["hour"][15]["temp_f"]
+                "temp_f": result["forecast"]["forecastday"][0]["hour"][15]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][0]["hour"][15]["condition"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][18]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][18]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][0]["hour"][18]["temp_f"]
+                "temp_f": result["forecast"]["forecastday"][0]["hour"][18]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][0]["hour"][18]["condition"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][21]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][21]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][0]["hour"][21]["temp_f"]
-            },
-            {
-                "time": result["forecast"]["forecastday"][1]["hour"][0]["time"],
-                "temp_c": result["forecast"]["forecastday"][1]["hour"][0]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][1]["hour"][0]["temp_f"]
-            },
-            {
-                "time": result["forecast"]["forecastday"][1]["hour"][3]["time"],
-                "temp_c": result["forecast"]["forecastday"][1]["hour"][3]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][1]["hour"][3]["temp_f"]
-            },
-            {
-                "time": result["forecast"]["forecastday"][1]["hour"][6]["time"],
-                "temp_c": result["forecast"]["forecastday"][1]["hour"][6]["temp_c"],
-                "temp_f": result["forecast"]["forecastday"][1]["hour"][6]["temp_f"]
+                "temp_f": result["forecast"]["forecastday"][0]["hour"][21]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][0]["hour"][21]["condition"]
             },
             {
                 "day": result["forecast"]["forecastday"][1]["hour"][0]["time"],
