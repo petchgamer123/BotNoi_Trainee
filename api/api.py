@@ -39,55 +39,85 @@ def resultToDay(result):
                 "time": result["forecast"]["forecastday"][0]["hour"][9]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][9]["temp_c"],
                 "temp_f": result["forecast"]["forecastday"][0]["hour"][9]["temp_f"],
-                "condition" : result["forecast"]["forecastday"][0]["hour"][9]["condition"]
+                "condition" : result["forecast"]["forecastday"][0]["hour"][9]["condition"]["text"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][12]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][12]["temp_c"],
                 "temp_f": result["forecast"]["forecastday"][0]["hour"][12]["temp_f"],
-                "condition" : result["forecast"]["forecastday"][0]["hour"][12]["condition"]
+                "condition" : result["forecast"]["forecastday"][0]["hour"][12]["condition"]["text"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][15]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][15]["temp_c"],
                 "temp_f": result["forecast"]["forecastday"][0]["hour"][15]["temp_f"],
-                "condition" : result["forecast"]["forecastday"][0]["hour"][15]["condition"]
+                "condition" : result["forecast"]["forecastday"][0]["hour"][15]["condition"]["text"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][18]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][18]["temp_c"],
                 "temp_f": result["forecast"]["forecastday"][0]["hour"][18]["temp_f"],
-                "condition" : result["forecast"]["forecastday"][0]["hour"][18]["condition"]
+                "condition" : result["forecast"]["forecastday"][0]["hour"][18]["condition"]["text"]
             },
             {
                 "time": result["forecast"]["forecastday"][0]["hour"][21]["time"],
                 "temp_c": result["forecast"]["forecastday"][0]["hour"][21]["temp_c"],
                 "temp_f": result["forecast"]["forecastday"][0]["hour"][21]["temp_f"],
-                "condition" : result["forecast"]["forecastday"][0]["hour"][21]["condition"]
+                "condition" : result["forecast"]["forecastday"][0]["hour"][21]["condition"]["text"]
+            },
+            {
+                "time": result["forecast"]["forecastday"][1]["hour"][0]["time"],
+                "temp_c": result["forecast"]["forecastday"][1]["hour"][0]["temp_c"],
+                "temp_f": result["forecast"]["forecastday"][1]["hour"][0]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][1]["hour"][0]["condition"]["text"]
+            },
+            {
+                "time": result["forecast"]["forecastday"][1]["hour"][3]["time"],
+                "temp_c": result["forecast"]["forecastday"][1]["hour"][3]["temp_c"],
+                "temp_f": result["forecast"]["forecastday"][1]["hour"][3]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][1]["hour"][3]["condition"]["text"]
+            },
+            {
+                "time": result["forecast"]["forecastday"][1]["hour"][6]["time"],
+                "temp_c": result["forecast"]["forecastday"][1]["hour"][6]["temp_c"],
+                "temp_f": result["forecast"]["forecastday"][1]["hour"][6]["temp_f"],
+                "condition" : result["forecast"]["forecastday"][1]["hour"][6]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][1]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][1]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][1]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][1]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][1]["hour"][0]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][2]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][2]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][2]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][2]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][2]["hour"][0]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][3]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][3]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][3]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][3]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][3]["hour"][0]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][4]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][4]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][4]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][4]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][4]["hour"][0]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][5]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][5]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][5]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][5]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][5]["hour"][0]["condition"]["text"]
             },
             {
                 "day": result["forecast"]["forecastday"][6]["hour"][0]["time"],
-                "weather": result["forecast"]["forecastday"][6]["day"]["maxtemp_c"]
+                "weathermin": result["forecast"]["forecastday"][6]["day"]["mintemp_c"],
+                "weathermax": result["forecast"]["forecastday"][6]["day"]["maxtemp_c"],
+                "condition" : result["forecast"]["forecastday"][6]["hour"][0]["condition"]["text"]
             }
         ]
     }
