@@ -50,13 +50,13 @@ async def delete_user(id: str):
     return {"status": "ok"}
 
 
-#  error
-@user.put("/{id}", tags=["user"])
-async def update_user(id:str, user:User):
-    collection_name.find_one_and_update({"_id":ObjectId(id)}, {
-        "$set": dict(user)
-    })
-    user = users_serializer(collection_name.find_one({"_id": ObjectId(id)}))
-    return {"status": "OK", "data": user}
+# #  error
+# @user.put("/{id}", tags=["user"])
+# async def update_user(id:str, user:User):
+#     collection_name.find_one_and_update({"_id":ObjectId(id)}, {
+#         "$set": dict(user)
+#     })
+#     user = users_serializer(collection_name.find_one({"_id": ObjectId(id)}))
+#     return {"status": "OK", "data": user}
 
 
