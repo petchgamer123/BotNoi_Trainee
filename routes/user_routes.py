@@ -33,19 +33,23 @@ def country(country: str):
     return resultToDay(url)
 # ************************************************
 
-@user.get("/", tags=["user"])
+@user.get("/get/", tags=["user"])
 async def get_users():
     users = users_serializer(collection_name.find())
     return {"status": "OK", "data":users}
 
-@user.post("/", tags=["user"])
+@user.post("/post/", tags=["user"])
 async def post_users(user: User):
     _id = collection_name.insert_one(dict(user))
     users = users_serializer(collection_name.find({"_id": _id.inserted_id}))
     return {"status": "OK", "data":users}
 
-#  error
-@user.put("/{id}", tags=["user"])
+@user.get("/findname/{id}", tags=["user"])
+async def get_one_user(id: str):
+    user = collection_name.find_one({"user_id": id}, {'_id': False})
+    return {"status": "OK", "data":user}
+
+@user.put("/updateUser/{id}", tags=["user"])
 async def update_user(id: str, user:data):
     collection_name.find_one_and_update({"user_id": id}, {
         "$set": dict(user)
@@ -53,7 +57,7 @@ async def update_user(id: str, user:data):
     user = users_serializer(collection_name.find({"user_id": id}))
     return {"status": "OK", "data": user}
 
-@user.delete("/{id}", tags=["user"])
+@user.delete("/deleteUser/{id}", tags=["user"])
 async def delete_user(id: str):
     collection_name.find_one_and_delete({"user_id": id})
     return {"status": "ok"}
