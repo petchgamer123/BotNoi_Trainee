@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from api.api import response_7Days, resultToDay, responseTest
-from models.user_models import User
+from models.user_models import User, data
 from config.db import collection_name
 from schemas.user_schemas import user_serializer, users_serializer
 
@@ -44,19 +44,17 @@ async def post_users(user: User):
     users = users_serializer(collection_name.find({"_id": _id.inserted_id}))
     return {"status": "OK", "data":users}
 
+#  error
+@user.put("/{id}", tags=["user"])
+async def update_user(id: str, user:data):
+    collection_name.find_one_and_update({"user_id": id}, {
+        "$set": dict(user)
+    })
+    user = users_serializer(collection_name.find({"user_id": id}))
+    return {"status": "OK", "data": user}
+
 @user.delete("/{id}", tags=["user"])
 async def delete_user(id: str):
-    collection_name.find_one_and_delete({"_id": ObjectId(id)})
+    collection_name.find_one_and_delete({"user_id": id})
     return {"status": "ok"}
-
-
-# #  error
-# @user.put("/{id}", tags=["user"])
-# async def update_user(id:str, user:User):
-#     collection_name.find_one_and_update({"_id":ObjectId(id)}, {
-#         "$set": dict(user)
-#     })
-#     user = users_serializer(collection_name.find_one({"_id": ObjectId(id)}))
-#     return {"status": "OK", "data": user}
-
 
