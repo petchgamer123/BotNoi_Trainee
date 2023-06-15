@@ -10,6 +10,7 @@ app = FastAPI()
 app.include_router(user)
 
 origins = [
+    "https://b94f-180-183-117-81.ngrok-free.app/",
     "http://localhost",
     "http://localhost:4200",
     "http://localhost:4200/home",
